@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <title> Website </title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name=" viewport" content="width=device-width, initial-scale=1";>
+    </head>
+    <body>
+      <div class="banner"> 
+        <div class="navbar">
+          <img src="THE COLLECTION.png" class="logo" height="145vh" width="165vh">
+          <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> Inspirations </a></li>
+            <li><a href="#"> Other Works </a></li>
+            <li><a href="#"> About Us </a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <h1> THE COLLECTION </h1>
+          <p> designing dreams in the virtual runway
+          </p> <br>
+          <div>
+            <button type="button" onclick="openIndex2()">START DESIGNING</button>
+              <button type="button"><span></span> 3D FITTING </button>
+              <button type="button"><span></span> RUNWAY SHOWDOWN </button>
+            </div>
+        </div>
+      </div>
+
+      <!--FEATURES-->
+
+      <section id="feature">
+        <div class="title-text";>
+          <p> PREPARE FOR RUNWAY </p>
+        </div>
+        <div class="feature-box">
+          <div class="features">
+            <div class="features-desc">
+              <div class="feature-text">
+                <p> Style your models with the help of AI-generated styling 
+                  assistant.
+                </p>
+              </div>
+              <div class="features-img">
+                <img src="img1.avif">
+              </div>
+            </div>
+            <div class="features-desc">
+              <div class="feature-text">
+                <p> Review the designed outfits one by one in 3D by rotating 
+                    them through 360 degrees.
+                </p>
+              </div>
+              <div class="features-img">
+                <img src="img2.avif">
+              </div>
+            </div>
+            <div class="features-desc">
+              <div class="feature-text">
+                <p> Experience your entire collection in a runway-style 
+                    overview and savor the excitement of the grand showdown.
+                </p>
+              </div>
+              <div class="features-img">
+                <img src="img3.avif">
+              </div>
+            </div>
+        </div>
+        <br>
+        <div class="fashion">
+          <img src="img5.avif">
+          <img src="img6.avif">
+          <img src="img4.avif">
+          <img src="img7.avif">
+        </div>
+        <div class="3d">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.40/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/SfKoXTIK8855JlOF/scene.splinecode"></spline-viewer>
+        </div>
+      </section>    
+      <!--script wali line hata de-->
+      <script>
+        function openIndex2() {
+            window.location.href = 'index2.html'; // Redirect to index2.html
+        }
+    </script>
+</body>
+</html>

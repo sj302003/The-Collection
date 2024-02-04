@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIFRA</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+
+  .chatbot-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw; /* 80% of the viewport width */
+    max-width: 800px; /* Set a maximum width if needed */
+    height: 100vh;
+    background-color: #e69191;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure no scrollbars appear */
+  }
+
+  .chatbot-header {
+    background-color: #ff0062;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .chatbot-content {
+    display: flex;
+    flex: 1; /* Grow to fill remaining space */
+    padding: 10px;
+    flex-direction: column-reverse; /* Display messages in reverse order */
+  }
+
+  .conversation {
+    flex: 1; /* Grow to fill remaining space */
+    overflow-y: auto;
+  }
+
+  .message {
+    max-width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .user-message {
+    background-color: #ddf;
+    float: right;
+    margin-left: auto; /* Push user messages to the right */
+    margin-top: 10px; /* Add vertical space */
+  }
+
+  .bot-message {
+    background-color: #ffd;
+    float: left;
+    margin-right: auto; /* Push bot messages to the left */
+    margin-top: 10px; /* Add vertical space */
+  }
+
+  .message::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .user-message::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent #ddf transparent transparent;
+  }
+
+  .bot-message::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent transparent transparent #ffd;
+  }
+
+  .message-input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .send-button {
+    width: 30%;
+    padding: 8px;
+    background-color: #ff0062;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+  .account-option {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff0062;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+  }
+
+  .account-option:hover {
+    background-color: #ff3b78;
+  }
+</style>
+</head>
+<body>
+
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chatbot-header">Chatbot</div>
+  <h2 style="text-align: center;">Welcome to Chatbot!</h2>
+  <div class="chatbot-content">
+    <div class="conversation" id="conversation">
+      <div class="message bot-message">Welcome I am SIFRA! How can I assist you?</div>
+      <br><br><br>
+      <div class="message user-message">Hy SIFRA!! I need to something to wear with my black glittery skirt</div>
+      <br><br><br>
+      <div class="message bot-message">Why not try a tank top?</div>
+      <br><br><br>
+      <div class="message user-message">Are you sure? That will go for a party night?</div>
+      <br><br><br>
+      <div class="message bot-message">Give it a shot girl!</div>
+      <br><br><br>
+    </div>
+   
+  </div>
+  <div style="display: flex; align-items: center;">
+    <input type="text" class="message-input" id="userInput" placeholder="Type your message...">
+    <button class="send-button" onclick="sendMessage()">Send</button>
+  </div>
+  <div class="account-option">Create a new account</div>
+</div>
+
+</body>
+</html>
